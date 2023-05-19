@@ -1,0 +1,22 @@
+//Stage 1 - Reuben Holmes
+//-----   Definition District   --------------------------------------------
+//-----   Programming Part   -----------------------------------------------
+      MOV R4, #startprompt1
+      STR R4, .WriteString
+      MOV R4, #Codemaker
+      STR R4, .ReadString
+      MOV R4, #startprompt2
+      STR R4, .WriteString
+      MOV R4, #Codebreaker
+      STR R4, .ReadString
+      MOV R4, #startprompt3
+      STR R4, .WriteString
+      MOV R4, #NumTries
+      LDR R4, .InputNum
+//-----   Variable & Array Area   ------------------------------------------
+startprompt1: .ASCIZ "Enter the Codemaker's name"
+startprompt2: .ASCIZ "Enter the Codebreaker's name"
+startprompt3: .ASCIZ "Enter the number of guesses to crack the code"
+Codemaker: .Block 128
+Codebreaker: .Block 128
+NumTries: .Block 4

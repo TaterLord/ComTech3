@@ -1,0 +1,21 @@
+//This is the complete combination of all the work done on the separate stages.
+//Program made by the Fantastic Four - Reuben - Joel - Akhil - Jacob
+/*
+Don't forget the rules for Register usage:
+ - r0-r3 for function arguments and return values
+ - r4-412 not to be altered by functions
+ - lr and sp used for stack management
+ - pc is the next instruction - used to exit a function
+*/
+
+//-----   Definition District   --------------------------------------------
+
+
+
+//-----   Programming Part   -----------------------------------------------
+
+
+
+
+//-----   Variable & Array Area   ------------------------------------------
+
