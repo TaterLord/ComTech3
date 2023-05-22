@@ -13,10 +13,26 @@
       STR R4, .WriteString
       MOV R4, #NumTries
       LDR R4, .InputNum
+      MOV R4, #startinfo1
+      STR R4, .WriteString
+      MOV R4, #Codebreaker
+      STR R4, .WriteString
+      MOV R4, #startinfo2
+      STR R4, .WriteString
+      MOV R4, #Codemaker
+      STR R4, .WriteString
+      MOV R4, #startinfo3
+      STR R4, .WriteString
+      MOV R4, #NumTries
+      STR R4, .WriteUnsignedNum
+      HALT
 //-----   Variable & Array Area   ------------------------------------------
-startprompt1: .ASCIZ "Enter the Codemaker's name"
-startprompt2: .ASCIZ "Enter the Codebreaker's name"
-startprompt3: .ASCIZ "Enter the number of guesses to crack the code"
+startprompt1: .ASCIZ "\nEnter the Codemaker's name"
+startprompt2: .ASCIZ "\nEnter the Codebreaker's name"
+startprompt3: .ASCIZ "\nEnter the number of guesses to crack the code"
+startinfo1: .ASCIZ "\nCodebreaker is "
+startinfo2: .ASCIZ "\nCodemaker is "
+startinfo3: .ASCIZ "\nMaximum number fo guesses: "
 Codemaker: .Block 128
 Codebreaker: .Block 128
 NumTries: .Block 4
