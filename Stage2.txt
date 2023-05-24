@@ -1,0 +1,32 @@
+//Stage 2 - Akhil Boda
+validtry:               //Ensures user enter a valid number between 1 - 10
+      MOV R0, #startprompt
+      STR R0, .WriteString
+      LDR R1, .InputNum
+      CMP R1, #1
+      BLT validtry
+      CMP R1, #10
+      BGT validtry
+      MOV R0, #displaytries
+      STR R0, .WriteString
+      STR R1, .WriteUnsignedNum
+      MOV R0, #prompt
+      STR R0, .WriteString
+      MOV R2, #0        //load R2 reg with array index & intialise
+getcode:
+      MOV R0, #userinput
+      STR R0, .ReadString
+      CMP R2, #4
+//store in array
+      MOV R3, #array 
+      LDR R4, [R2 + R3]
+      ADD R2, R2, #1
+      CMP R2, R1
+      BLT getcode
+      HALT
+startprompt: .ASCIZ "\nEnter number of tries to crack the code."
+prompt: .ASCIZ "\nEnter code: "
+displaytries: .ASCIZ "\nNumber of tries: "
+      .ALIGN 4
+userinput: .BLOCK 4
+array:
